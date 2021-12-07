@@ -1,0 +1,20 @@
+.contenedor{
+    padding: 3rem;
+}
+
+.icono{
+    padding: 1rem;
+}
+
+.icono img{
+    width: 8rem;
+}
+
+.contador{
+    display: flex;
+    padding: 1rem;
+}
+
+.contador p {
+    padding: 1rem;
+}
