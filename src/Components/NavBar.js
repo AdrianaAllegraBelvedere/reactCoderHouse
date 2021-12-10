@@ -1,5 +1,6 @@
 import React from  'react';
 import CartWidget from './CartWidget';
+import { BsFillCartFill} from "react-icons/bs";
 
 const NavBar = () => {
 
@@ -27,6 +28,13 @@ const NavBar = () => {
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">login</a>
+                    </li>
+                    <li class="nav-item">
+                        <div>
+                            <p class="nav-link" href="#">
+                                <BsFillCartFill/>
+                            </p>
+                        </div>
                     </li>
                 </ul>
             </div>
