@@ -18,3 +18,10 @@
 .contador p {
     padding: 1rem;
 }
+.card-img{
+    width: 14rem;
+    height: auto;
+}
+.product{
+    flex-direction: inherit;
+}
