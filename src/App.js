@@ -5,7 +5,6 @@ import NavBar from './Components/NavBar';
 function App() {
   const saludo = 'Hola Mundo!';
 
-
   return (
     <>
     <NavBar/>
