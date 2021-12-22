@@ -25,3 +25,9 @@
 .product{
     flex-direction: inherit;
 }
+
+.producto-destacado{
+    width: auto;
+    height: 13rem;
+    display: flex;
+}
