@@ -1,8 +1,9 @@
 import React from  'react';
 import CartWidget from './CartWidget';
 import { BsFillCartFill} from "react-icons/bs";
+import { NavLink,Link } from 'react-router-dom';
 
-const NavBar = () => {
+const NavBar = ({links,cantidadProductos}) => {
 
     return(
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -14,28 +15,26 @@ const NavBar = () => {
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Inicio</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Productos</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Productos Destacados</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Carrito</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">login</a>
-                    </li>
-                    <li className="nav-item">
-                        <div>
-                            <p className="nav-link" href="#">
-                                <BsFillCartFill/>
-                            </p>
-                        </div>
-                    </li>
+
+                    {links.map(link =>{
+                        return (
+                            <li className="nav-item">
+                                <Link key={link.id} className="nav-link" to={link.href}>{link.nombre}</Link>
+                            </li>
+                        )
+                    })}
+                    <NavLink to="carrito">
+                        <li className="nav-item">
+                            <div>
+                                <p className="nav-link" href="#">
+                                    <BsFillCartFill/>
+                                    <label>
+                                        |{cantidadProductos === 0 ? " " : cantidadProductos}
+                                    </label>
+                                </p>
+                            </div>
+                        </li>
+                    </NavLink>
                 </ul>
             </div>
             </nav>
