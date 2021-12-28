@@ -1,5 +1,5 @@
 import React,{useEffect} from 'react';
-import ItemCount from './ItemCount';
+import { NavLink,Link } from 'react-router-dom';
 import ItemList from './ItemList';
 import { useParams } from "react-router-dom"
 
@@ -69,6 +69,9 @@ const ItemListContainer = ( props ) => {
             </div>
         </div>
         <ItemList productos={productos} setCantidadProductos={setCantidadProductos}/>
+        <NavLink to="cart">
+            <button type="button" class="btn btn-primary btn-lg">Terminar Compra</button>
+        </NavLink>
         </>
     )
 }

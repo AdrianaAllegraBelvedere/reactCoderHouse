@@ -5,7 +5,7 @@ import NavBar from './Components/NavBar';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import VistaError from './Components/VistaError';
 import Carrito from './Components/Carrito';
-
+import Compra from './Components/Compra';
 
 const App = () => {
 
@@ -29,7 +29,8 @@ const App = () => {
               <Route path="/categoria/:id" element={<ItemListContainer setCantidadProductos ={setCantidadProductos} saludo ={saludo} productos={productos} setProductos={setProductos}/>}/>
               <Route path="/item/:id" element={ <ItemDetailContainer productos={productos} /> } />
               <Route path="*" element={<VistaError/>}/>
-              <Route path="carrito" element={<Carrito/>} />
+              <Route path="/carrito" element={<Carrito/>} />
+              <Route path="/cart" element={<Compra/>} />
         </Routes>
       </BrowserRouter>
     </>
