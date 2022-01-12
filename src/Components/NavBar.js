@@ -29,7 +29,7 @@ const NavBar = ({links,cantidadProductos}) => {
                                 <p className="nav-link" href="#">
                                     <BsFillCartFill/>
                                     <label>
-                                        |{cantidadProductos === 0 ? " " : cantidadProductos}
+                                        {cantidadProductos}
                                     </label>
                                 </p>
                             </div>

@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom"
 
 const ItemListContainer = ( props ) => {
 
-    const {saludo,productos,setProductos,setCantidadProductos} = props;
+    const {saludo,productos,setProductos} = props;
     const {id} = useParams();
     console.log(id);
 
@@ -68,7 +68,7 @@ const ItemListContainer = ( props ) => {
                 <h1 className="display-4">{saludo}</h1>
             </div>
         </div>
-        <ItemList productos={productos} setCantidadProductos={setCantidadProductos}/>
+        <ItemList productos={productos}/>
         <NavLink to="cart">
             <button type="button" class="btn btn-primary btn-lg">Terminar Compra</button>
         </NavLink>

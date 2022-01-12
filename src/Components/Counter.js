@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 
 const Counter =(props) => {
 
-    const {onAdd,initial,stock} = props;
+    const {onAdd,initial,stock,isRemoveItem,quitarCarrito} = props;
 
     const [contador,setContador] = useState(initial);
 
@@ -34,6 +34,12 @@ const Counter =(props) => {
                     </div>
                 </div>
                 <button type="button" className="btn btn-primary mt-2 " onClick={() => onAdd(contador)}>Agregar</button>
+                <div>
+                    {isRemoveItem 
+                    ? <button type="button" className="btn btn-danger mt-2 " onClick={() => quitarCarrito(contador)}>Quitar Carrito</button>
+                    : null}
+                </div>
+   
             </form>
             <p className="mt-5">Tiene un stock de {stock} productos</p>
         </>
